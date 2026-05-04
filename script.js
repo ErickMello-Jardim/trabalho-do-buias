@@ -34,6 +34,11 @@ const goals = [
     title: "Atravessar a Casa de Gemeos",
     chip: "Missao 08",
     color: "#46ff9a",
+    color: "#ff344f",
+    description:
+      "Iniciar o treinamento de um cavaleiro escolhido pela constelacao de Pegasus. A missao e despertar o primeiro brilho do cosmo, resistir ao teste da queda das estrelas e provar coragem diante do portao do Santuario.",
+    steps: ["Completar 7 noites de treino sob as estrelas", "Forjar o primeiro medalhao de bronze", "Vencer o desafio da constelacao guia"],
+    progress: 18,
     description:
       "Enfrentar uma ilusao criada no corredor duplo do Santuario. A missao e separar verdade e reflexo, encontrar a saida correta e impedir que o grupo perca horas preciosas dentro do labirinto astral.",
     steps: ["Mapear os dois caminhos ilusorios", "Quebrar o espelho do falso mestre", "Abrir a passagem com cosmo sincronizado"],
@@ -126,6 +131,11 @@ function targetDate(goal) {
   return new Date(goal.target);
 }
 
+    color: "#ff344f",
+    description:
+      "Iniciar o treinamento de um cavaleiro escolhido pela constelacao de Pegasus. A missao e despertar o primeiro brilho do cosmo, resistir ao teste da queda das estrelas e provar coragem diante do portao do Santuario.",
+    steps: ["Completar 7 noites de treino sob as estrelas", "Forjar o primeiro medalhao de bronze", "Vencer o desafio da constelacao guia"],
+    progress: 18,
 function remainingParts(target) {
   const total = Math.max(0, Math.floor((target - new Date()) / 1000));
   return {
@@ -363,7 +373,12 @@ function hitMarker(point) {
   });
 }
 
-canvas.addEventListener("click", (event) => {
+canvas.addEventListener
+    color: "#ff344f",
+    description:
+      "Iniciar o treinamento de um cavaleiro escolhido pela constelacao de Pegasus. A missao e despertar o primeiro brilho do cosmo, resistir ao teste da queda das estrelas e provar coragem diante do portao do Santuario.",
+    steps: ["Completar 7 noites de treino sob as estrelas", "Forjar o primeiro medalhao de bronze", "Vencer o desafio da constelacao guia"],
+    progress: 18,("click", (event) => {
   const hit = hitMarker(canvasPoint(event));
   if (hit) openGoal(hit.hour);
 });
