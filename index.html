@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus de Objetivos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="starsCanvas" aria-hidden="true"></canvas>
+
+    <main class="app">
+      <header class="hud-top">
+        <div>
+          <span class="signal">Nexus 24</span>
+          <h1>Central de Objetivos</h1>
+        </div>
+        <div class="status-strip" aria-label="Status do sistema">
+          <span>Sistema online</span>
+          <span>5 missoes</span>
+          <span>Tempo real</span>
+        </div>
+      </header>
+
+      <section class="command-grid">
+        <section class="clock-dock" aria-label="Relogio com objetivos clicaveis">
+          <div class="side-readout left-readout">
+            <span>Foco</span>
+            <strong>87%</strong>
+          </div>
+
+          <canvas id="clockCanvas" width="720" height="720"></canvas>
+
+          <div class="side-readout right-readout">
+            <span>Energia</span>
+            <strong>12.4</strong>
+          </div>
+        </section>
+
+        <section class="mission-rail" aria-label="Atalhos dos objetivos">
+          <button type="button" data-hour="2">02</button>
+          <button type="button" data-hour="5">05</button>
+          <button type="button" data-hour="8">08</button>
+          <button type="button" data-hour="10">10</button>
+          <button type="button" data-hour="12">12</button>
+        </section>
+      </section>
+
+      <aside id="goalPanel" class="goal-drawer" hidden aria-live="polite"></aside>
+
+      <footer class="hud-bottom">
+        <span><b></b> horas vermelhas clicaveis</span>
+        <span><i></i> ponteiros ativos</span>
+        <span><em></em> gaveta de missao unica</span>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
